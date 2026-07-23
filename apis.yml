@@ -1,8 +1,32 @@
 aid: 6river
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/6river.png
 name: 6river
-description: '6river is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: '6 River Systems (6RS) is a warehouse fulfillment automation company founded in 2015 in
+  Waltham, Massachusetts. Its flagship product is "Chuck," a collaborative autonomous mobile robot (AMR)
+  that works alongside human associates to guide and optimize picking, sorting, and replenishment in
+  distribution centers. The platform is WMS-agnostic and integrates with existing warehouse-management
+  systems as an intelligent execution layer via a private/partner REST API for host data exchange; it
+  does not publish a public developer portal, API documentation, or consumer SDKs. Norwest Venture
+  Partners was an early investor; the company was acquired by Shopify in 2019 and by Ocado Group in 2023.
+  The public marketing site at 6river.com currently serves a parked lander stub.'
+enrichment:
+  ran: '2026-07-17'
+  finding: no-public-api-surface
+  notes: Robotics/fulfillment company; WMS-integration REST API is partner/private only. No OpenAPI,
+    no public docs portal, no consumer SDKs. Well-known probes on 6river.com are SPA false-positives
+    (redirect-to-/lander stub for all paths). Verifiable public surfaces are the GitHub org and the
+    internal @6river npm scope (dev tooling, not API clients). Domain security probed.
 url: https://raw.githubusercontent.com/api-evangelist/6river/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -15,7 +39,13 @@ created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-- Unknown
+- Warehouse Automation
+- Robotics
+- Autonomous Mobile Robots
+- Fulfillment
+- Logistics
+- Supply Chain
+- Warehouse Management
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +53,14 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/6river-domain-security.yml
 - type: Website
   url: https://6river.com
+- type: GitHubOrganization
+  url: https://github.com/6riversystems
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
