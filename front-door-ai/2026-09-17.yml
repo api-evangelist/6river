@@ -1,0 +1,22 @@
+# Front Door AI Index — 6river — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: 6river
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: 6river.com
+  final_host: 6river.com
+  ownership: own
+  owner: 6river
+  shares_host_with:
+  - 6-river-systems
+  inherited_from: null
+  verdict: thin
+  score: null
+  host_score: null
+  density: null
+  words: 0
+  tiers: null
+  ambiguous: null
+  top_terms: null
